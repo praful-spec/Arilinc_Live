@@ -581,7 +581,7 @@ function SignInScreen({ onSubmit }) {
 // ================================================================
 export default function AriLincPlatform() {
   const [user, setUser] = useState(null);
-  const [section, setSection] = useState("agents");
+  const [section, setSection] = useState("assets");
 
   // ── Upload state ──
   const [uploadedData, setUploadedData] = useState({});
@@ -674,10 +674,10 @@ export default function AriLincPlatform() {
   };
 
   const sectionConfig = [
-    { key:"agents", icon:"🤖", label:"AI Agents" },
-    { key:"assets", icon:"📊", label:"Asset Dashboard" },
-    { key:"value",  icon:"💰", label:"Business Value" },
-    { key:"overview", icon:"🏠", label:"Overview" },
+    { key:"assets",   icon:"📊", label:"Asset Dashboard" },
+    { key:"agents",   icon:"🤖", label:"AI Agents" },
+    { key:"value",    icon:"💰", label:"Business Value" },
+    { key:"overview", icon:"📋", label:"Executive View" },
   ];
 
   if(!user) return <SignInScreen onSubmit={setUser}/>;
@@ -1388,7 +1388,7 @@ export default function AriLincPlatform() {
 
       {/* Footer */}
       <div className="fw">
-        <div style={{fontSize:12,color:BRAND.light}}><span style={{color:BRAND.green}}>●</span> AriLinc Platform · Agents · Assets · Value · Overview · Powered by AriPrus</div>
+        <div style={{fontSize:12,color:BRAND.light}}><span style={{color:BRAND.green}}>●</span> AriLinc Platform · Assets · AI Agents · Value · Executive View · Powered by AriPrus</div>
         <div style={{display:"flex",gap:16,alignItems:"center",flexWrap:"wrap"}}>
           <a href="mailto:info@ariprus.com" style={{fontSize:12,color:BRAND.sub,textDecoration:"none"}}>✉ info@ariprus.com</a>
           <a href="https://ariprus.com/contact-us/" target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:BRAND.blue,fontWeight:700,textDecoration:"none"}}>Talk to us about your plant →</a>
